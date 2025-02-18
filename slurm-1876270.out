@@ -1,0 +1,13 @@
+/home/eachand/VesselBoost/utils/unet_utils.py:252: RuntimeWarning: invalid value encountered in divide
+  return (x - np.mean(x)) / np.std(x)
+Training session will start shortly..
+Parameters Info:
+*************************************************************
+
+Input image path: ./data/train, Segmentation path: ./data/label, Prep_mode: 4
+
+Epoch number: 2, Learning rate: 0.001 
+
+Aborting the preprocessing procedure!
+
+  0%|          | 0/2 [00:00<?, ?it/s]                                       0%|          | 0/2 [15:46<?, ?it/s] 50%|█████     | 1/2 [15:46<15:46, 946.30s/it]slurmstepd: error: *** JOB 1876270 ON node0096 CANCELLED AT 2025-02-05T15:11:54 DUE TO TIME LIMIT ***

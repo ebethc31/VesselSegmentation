@@ -1,0 +1,31 @@
+/home/eachand/VesselBoost/utils/unet_utils.py:252: RuntimeWarning: invalid value encountered in divide
+  return (x - np.mean(x)) / np.std(x)
+Training session will start shortly..
+Parameters Info:
+*************************************************************
+
+Input image path: ./data/train, Segmentation path: ./data/label, Prep_mode: 4
+
+Epoch number: 2, Learning rate: 0.001 
+
+Aborting the preprocessing procedure!
+
+  0%|          | 0/2 [00:00<?, ?it/s]                                       0%|          | 0/2 [15:29<?, ?it/s] 50%|█████     | 1/2 [15:29<15:29, 929.62s/it]                                               50%|█████     | 1/2 [30:58<15:29, 929.62s/it]100%|██████████| 2/2 [30:58<00:00, 929.17s/it]100%|██████████| 2/2 [30:58<00:00, 929.24s/it]
+Epoch: [1/2], Loss:  nan, Current learning rate:  0.00003863
+Epoch: [2/2], Loss:  nan, Current learning rate:  0.00000019
+Training finished! Please wait for the model to be saved!
+
+Traceback (most recent call last):
+  File "/home/eachand/VesselBoost/train.py", line 44, in <module>
+    train_process.train(processed_img, seg_img, out_path)
+  File "/home/eachand/VesselBoost/utils/train_utils.py", line 213, in train
+    self.training_loop(multi_image_loder, model, out_mo_path)
+  File "/home/eachand/VesselBoost/utils/train_utils.py", line 200, in training_loop
+    torch.save(model.state_dict(), save_path)
+  File "/home/eachand/.local/lib/python3.10/site-packages/torch/serialization.py", line 849, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+  File "/home/eachand/.local/lib/python3.10/site-packages/torch/serialization.py", line 716, in _open_zipfile_writer
+    return container(name_or_buffer)
+  File "/home/eachand/.local/lib/python3.10/site-packages/torch/serialization.py", line 687, in __init__
+    super().__init__(torch._C.PyTorchFileWriter(self.name))
+RuntimeError: File ./models cannot be opened.
